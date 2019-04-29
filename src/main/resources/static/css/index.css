@@ -1,0 +1,71 @@
+.form{
+    padding-left: 40%;
+    padding-top: 15%
+}
+legend{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 1.1cm;   
+}
+.main{
+    
+    height: 5cm;
+    width: 25cm;
+   border-width: 1cm;
+    
+}
+
+table{
+    padding-top:10%
+}
+
+.password,.username{
+    height: 1cm;
+    width: 13cm;
+    border-radius: 0.3cm;
+    padding-left:10%;
+    font-size: 100%;
+}
+
+.password:focus,.username:focus{
+    border-color:green;
+    transition-delay:100ms;
+    border-style: dotted;
+}
+label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.5cm;   
+}
+.button{
+    
+  font-size: 150%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   color: azure;
+    height: 1cm;
+    width: 10cm;
+    border-radius: 0.3cm;
+    background-color: green;
+}
+
+
+.button:active{
+    background-color:red;
+    transition-delay: 10ms;
+}
+.loginButton{
+    padding-top: 15%;
+    font-style: italic;
+}
+
+
+tr{
+    padding-top: 12%;
+}
+
+form-group{
+    background-color:cyan;
+    background-image: -moz-element();
+}
+
+fieldset{
+    width: 30%
+}

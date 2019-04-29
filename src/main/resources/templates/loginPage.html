@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta>
+<!--Page Title-->
+<title>School Accounting</title>
+<!--Reference css styling-->
+<link type="text/css" href="index.css" rel="stylesheet"/>
+
+<!-- Include Webjars -->
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<!--Create a form and include a main division and login division-->
+    <div class="main" align="center">
+<form  th:action="@{/school/}" th:object="${}" method="post" align="center"> 
+    <!--Create a Field set with a Title-->     
+      <fieldset><legend>Log In</legend>
+        <table>
+            <tbody>
+                <tr><td><label>Username  :&nbsp</label></td><td><input type="text" class="username" placeholder="   Type here ..."  required="required"></input></td></tr>
+                <tr><td><label>Password  :&nbsp</label></td><td><input type="password" class="password" required="required"></input></td></tr>
+            </tbody>
+        </table>
+    </fieldset>
+    
+    <br>
+    <div class="loginButton" align="center">
+        <input type="button" class="button" value="login">
+       <!-- <button name="Submit"></button>  -->
+    </div>
+</form>
+</div>
+</body>
+</html>
