@@ -7,14 +7,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-//@RequestMapping("/")
+@RequestMapping("/")
 public class LoginController {
 	
-	@GetMapping(value="/")
-	public ModelAndView welcomePage() {
-		ModelAndView model = new ModelAndView();
-		model.setViewName("loginPage");
-		return model;
+	@GetMapping(value="/login")
+	public ModelAndView loginPage(ModelAndView md) {
+		md.setViewName("login");
+		return md;
+	}
+	
+	@GetMapping(value="/main")
+	public ModelAndView welcomePage(ModelAndView md) {
+		md.setViewName("home");
+		return md;
 	}
 	/*
 	@RequestMapping(value = { "/homePage"}, method = RequestMethod.GET)
@@ -38,7 +43,7 @@ public class LoginController {
 		return model;
 	}
 	*/
-	@GetMapping(value="/login")
+	@GetMapping(value="/login1")
 	public ModelAndView loginPage(@RequestParam(value = "error",required = false) String error,
 	@RequestParam(value = "logout",	required = false) String logout) {
 		
@@ -50,7 +55,7 @@ public class LoginController {
 		if (logout != null) {
 		    model.addObject("message", "Logged out from JournalDEV successfully.");
 		}
-        model.addObject("", model);
+       // model.addObject("", model);
 		model.setViewName("loginPage");
 		return model;
 	}

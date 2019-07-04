@@ -1,5 +1,6 @@
 package com.school.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -13,8 +14,12 @@ import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name = "installment_payments")
-public class InstallmentPayments {
-	
+public class InstallmentPayments implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1969251483229532417L;
 
 	public InstallmentPayments(int id, String student_identifier, String name, double total_payments, double balance,
 			Date date) {

@@ -1,0 +1,15 @@
+.payname ,.payid ,.payamount , .paybtn{
+	margin-left:300px;
+	padding-right:250px;
+	padding-left:30px;
+	border-top-color: red;
+	width:800px;
+	
+}
+
+
+
+.container{
+	padding-top:10%;
+	
+}

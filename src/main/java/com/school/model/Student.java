@@ -1,5 +1,7 @@
 package com.school.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,16 +13,32 @@ import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name = "student")
-public class Student {
-	public Student(int id, String student_identifier, String name, String contact, String class_level, boolean status) {
+public class Student implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3953682961744769243L;
+
+	public Student(int id, String student_identifier, String name, String term, String gender, String contact,
+			String class_level, boolean status) {
 		super();
 		this.id = id;
 		this.student_identifier = student_identifier;
 		this.name = name;
+		this.term = term;
+		this.gender = gender;
 		this.contact = contact;
 		this.class_level = class_level;
 		this.status = status;
 	}
+
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
 
 	@Id
 	@Column(name = "id")
@@ -34,13 +52,20 @@ public class Student {
 	@Column(name = "name", unique = true)
 	private String name;
 	
+	@Column(name = "term")
+	private String term;
+	
+	
+	@Column(name = "gender")
+	private String gender;
+	
 	@Column(name = "contact", unique = true)
 	private String contact;
 	
-	@Column(name = "class_level", unique = true)
+	@Column(name = "class_level")
 	private String class_level;
 	
-	@Column(name = "status", unique = true)
+	@Column(name = "status")
 	private boolean status = true;
 
 	public int getId() {
@@ -67,6 +92,22 @@ public class Student {
 		this.name = name;
 	}
 
+	public String getTerm() {
+		return term;
+	}
+
+	public void setTerm(String term) {
+		this.term = term;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	public String getContact() {
 		return contact;
 	}
@@ -90,7 +131,6 @@ public class Student {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-	
-	
 
+		
 }

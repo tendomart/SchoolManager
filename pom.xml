@@ -11,6 +11,7 @@
 	<groupId>com.school</groupId>
 	<artifactId>school</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!-- <packaging>jar</packaging> -->
 	<name>school</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -72,6 +73,12 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency> 
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-tomcat</artifactId>         
+   <scope>provided</scope> 
+ </dependency>
 	</dependencies>
 
 	<build>

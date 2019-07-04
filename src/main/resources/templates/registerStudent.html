@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org">
+        <head>
+                <meta charset="utf-8">
+                <!--Form title-->
+                <title>Student Registration</title>
+                 <link type="text/css" th:href="@{/css/index.css}" rel="stylesheet"/>
+<link type="text/css" th:href="@{/css/login.css}" rel="stylesheet"></link>
+<link type="text/css" th:href="@{/css/w3css.css}" rel="stylesheet"></link>
+            <!--Use External Javascript files-->  
+    <script type="text/javascript" th:src="@{/js/login.js}"></script>
+    <script type="text/javascript" th:src="@{/js/index.js}"></script>
+            </head>
+            <body>
+                    <!--NavBar-->
+
+<!-- Include header -->
+ <th:block th:include="/fragments/_header"></th:block>
+
+
+                <!--Create  a Form -->
+                 
+                     <!-- <h4 class="w3-label w3-text-blue">Student Registration Form</h4> -->
+                       <!--  <fieldset class="w3-container w3-padding-64">  -->
+            <div  class="w3-container w3-padding-64 w3-card-4" >
+              <header class="w3-container w3-black  w3-opacity">
+  <h3>Please Register Student Here</h3>
+</header>
+                <!-- <h2 class="w3-text-blue"> Please Log In</h2>
+                 -->
+                
+                <form action="#" th:action="@{/student/student}" th:object="${student}" method="post">
+                
+                        <h3 id="error"></h3>
+                       <label class="w3-label w3-text-blue">Student Name</label> 
+                       <input type="text" class="w3-input w3-border"  th:field="*{name}" placeholder="e.g Kabuye Charles" id="name" >
+                     <label class="w3-label w3-text-blue">Student Identifier</label> 
+                       <input type="text" class="w3-input w3-border"  th:field="*{student_identifier}" placeholder="e.g 210937" >
+                     
+                     
+                     <label class="w3-label w3-text-blue">Gender</label> <select id="gender" name="gender" th:field="*{gender}">
+                             <option value=""></option>
+                             <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                        </select>
+
+                       <label class="w3-label w3-text-blue">Student Class</label> <select id="level" th:field="*{class_level}">
+                             <option value=""></option>
+                             <option value="P.7">Primary 7</option>
+                              <option value="S.1">S.1</option>
+                              <option value="S.3">S.3</option>
+                              <option value="S.4">S.4</option>
+                              <option value="S.5">S.5</option>
+                              <option value="S.4">S.6</option>
+                              <option value="Languages">Languages</option>
+                        </select>
+
+                        <label class="w3-label w3-text-blue">Academic Term</label> 
+                        <select id="term" th:field="*{term}">
+                             <option value=""></option>
+                             <option value="Term 1">Term 1</option>
+                              <option value="Term 2">Term 2</option>
+                              <option value="Term 3">Term 3</option>
+                        </select>
+                              <label class="w3-label w3-text-blue">Student Contact</label>
+                          <input type="text" class="w3-input  w3-border" th:field="*{contact}" placeholder="e.g 070273626" id="contact"/>
+                          
+                            
+                   <p> 
+                               
+                        <input type="submit"  class="w3-btn w3-ripple w3-green" value="Save Student  Data" onclick="validate()"> 
+                      </p> 
+                </form>
+ 
+                  </div>
+                <!--   </fieldset>  -->
+
+                  <!-- Footer -->
+  
+      <th:block th:include="/fragments/_footer"></th:block>
+      
+ </body>
+</html>

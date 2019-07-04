@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org" >
+  
+ <head>
+                <meta charset="utf-8">
+                <!--Form title-->
+                <title>Olam School - Accounts</title>
+                <link type="text/css" th:href="@{/css/index.css}" rel="stylesheet"/>
+<link type="text/css" th:href="@{/css/login.css}" rel="stylesheet"/>
+<link type="text/css" th:href="@{/css/w3css.css}" rel="stylesheet"/>
+  <!--Use External Javascript files-->  
+    <script th:src="@{/js/index.js}"></script>
+          
+            </head>
+           
+            <!-- Body -->
+            <body>
+                     <th:block th:include="/fragments/_header"></th:block>
+                  
+                        
+                            <div class="w3-container w3-padding-64 " >
+       
+
+        <div class="w3-row-padding w3-margin-top">
+           
+            <div class="w3-quarter">
+             <a th:href="@{#}">
+            
+                <div  class="w3-card-2 w3-btn w3-ripple w3-teal" style="width: 300px;height: 250px;">
+                <div class="w3-container">
+                    <p><h2>Calculate Total<br>Amount Paid</h2></h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+
+               <div class="w3-quarter">
+               <a th:href="@{#}">
+                <div  class="w3-card-2 w3-btn w3-ripple w3-teal" style="width: 300px;height: 250px;">
+                <div class="w3-container">
+                    <p><h2>Calculate Total <br>In Balances</h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+
+               
+        </div>
+        <!-- Create Margin -->
+        <div class="w3-row-padding w3-margin-top">
+         <div class="w3-quarter">
+                <a th:href="@{#}">
+                <div  class="w3-card-2 w3-btn w3-ripple w3-teal" style="width: 300px;height: 250px;">
+               <!--  <img src="/img/gall/karl.jpg" style="width:100%"> -->
+                <div class="w3-container">
+                    <p><h2>Calculate <br>Total Profits</h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+                
+              
+                <div class="w3-quarter">
+                  <a th:href="@{#}">
+                <div  class="w3-card-2 w3-btn w3-ripple w3-grey" style="width: 300px;height: 250px;">
+               <!--  <img src="/img/gall/karl.jpg" style="width:100%"> -->
+                <div class="w3-container">
+                    <p><h2>Calculate<br>Total Loss</h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+                
+                <div class="w3-quarter">
+                <a th:href="@{#}">
+                <div  class="w3-card-2 w3-btn w3-ripple w3-teal" style="width: 300px;height: 250px;">
+               <!--  <img src="/img/gall/karl.jpg" style="width:100%"> -->
+                <div class="w3-container">
+                    <p><h2>Print <br>Student Lists</h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+                
+                <div class="w3-quarter">
+                <a th:href="@{#}">
+                <div  class="w3-card-2 w3-btn w3-ripple w3-teal" style="width: 300px;height: 250px;">
+               <!--  <img src="/img/gall/karl.jpg" style="width:100%"> -->
+                <div class="w3-container">
+                    <p><h2>Print Student<br> Payment List</h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+                
+              
+                
+              
+        </div>
+
+         
+
+    </div>
+
+<th:block th:include="/fragments/_footer"></th:block>
+
+</body>
+
+</html>

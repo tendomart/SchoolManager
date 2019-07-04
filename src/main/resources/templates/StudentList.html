@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org">
+<head >
+<meta>
+<!--Page Title-->
+<title>Student List</title>
+<!--Reference css styling-->
+              <link type="text/css" th:href="@{/css/index.css}" rel="stylesheet"/>
+<link type="text/css" th:href="@{/css/login.css}" rel="stylesheet"/>
+<link type="text/css" th:href="@{/css/w3css.css}" rel="stylesheet"/>
+
+    <script th:src="@{/js/index.js}"></script>
+</head>
+<body>
+
+                        <th:block th:include="/fragments/_header"></th:block>
+
+                        
+
+<div class="w3-container w3-padding-64 w3-card-4">
+<header class="w3-container w3-black  w3-opacity">
+  <h3>Olai School Of Languages - Students List</h3>
+</header>
+<table class="w3-table w3-striped w3-bordered ">
+<thead>
+<tr class="w3-blue">
+  <th>No.</th>
+  <th>Student Identifier</th>
+  <th>Student Name</th>
+  <th>Term</th>
+  <th>Gender</th>
+  <th>Contact</th>
+  <th>Class</th>
+  <th>Status</th>
+   <th>Edit</th>
+  <th>Delete</th>
+</tr>
+</thead>
+
+<tbody>
+                <tr th:each="stud : ${StudentList}">
+                    <td th:text="${stud.id}"></td>
+                    <td th:text="${stud.student_identifier}"></td>
+                     <td th:text="${stud.name}"></td>
+                      <td th:text="${stud.term}"></td>
+                      <td th:text="${stud.gender}"></td>
+                    <td th:text="${stud.contact}"></td>
+                    <td th:text="${stud.class_level}"></td>
+                    <td th:text="${stud.status}"></td>
+                    
+                   
+                    <td><a th:href="@{/edit/{id}(id=${stud.id})}">Edit</a></td>
+                    <td><a th:href="@{/delete/{id}(id=${stud.id})}">Delete</a></td>
+                </tr>
+            </tbody>
+</table>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

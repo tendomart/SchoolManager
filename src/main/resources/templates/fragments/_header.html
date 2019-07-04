@@ -1,0 +1,49 @@
+  
+<div class="header-container"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+ <!--
+   <div class="site-name">Olai School Of Languages</div>
+   
+   <div class="header-bar">
+      <th:block sec:authorize="isAuthenticated()">
+         Hello
+         <a th:href="@{/admin/accountInfo}" th:utext="${#request.userPrincipal.name}">..</a>
+         &nbsp;|&nbsp;
+         <a th:href="@{/}">Logout</a>
+      </th:block>
+       
+      <th:block sec:authorize="!isAuthenticated()">
+         <a th:href="@{/}">Login</a>
+      </th:block>
+   </div>
+   
+</div>  -->
+   <!--Use External Javascript files-->  
+    
+<link type="text/css" th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
+
+<div class="w3-top">
+  <div class="w3-bar w3-center w3-teal" id="myNavbar">             
+   
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" title="Toggle Navigation Menu">
+      
+    </a>
+     <a th:href="@{/main/}" href="/home" class="w3-bar-item w3-button">HOME</a>
+    <a th:href="@{#}" class="w3-bar-item w3-button w3-hide-small "> ABOUT ME</a>
+    <a th:href="@{/student/}"  class="w3-bar-item w3-button w3-hide-small ">Register Student</a>
+    <a  th:href="@{/pay/}" class="w3-bar-item w3-button w3-hide-small ">Record Payment</a>
+    <a  th:href="@{/pay/list}" class="w3-bar-item w3-button w3-hide-small ">Payment List</a>
+   
+<a  th:href="@{/student/students/}" class="w3-bar-item w3-button w3-hide-small ">Student Lists</a>
+    
+    <a  th:href="@{/main/accounts}" class="w3-bar-item w3-button w3-hide-small ">School Accounts</a>
+    
+    <a th:href="@{/}" class="w3-bar-item w3-button w3-hide-small ">Logout</a>
+
+
+  </div>
+
+</div>
+
+ </div>

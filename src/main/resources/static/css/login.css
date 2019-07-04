@@ -1,0 +1,67 @@
+input[type=text]:focus {
+  background-color: lightblue;
+  border: 3px solid #555;
+}
+/*Login Form styling*/
+.login-form {
+    width: 600px;
+    margin: 0 auto;
+    font-family: Tahoma, Geneva, sans-serif;
+ 
+}
+
+/*Styling form Heading*/
+.login-form h2 {
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+}
+/*Styling for password and Name input fields*/
+.login-form input[type="password"],
+.login-form input[type="text"] ,
+.login-form input[type="email"]{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    margin-bottom: 15px;
+    box-sizing:border-box;
+    border-radius: 12px;
+
+}
+
+/*option boxes styling*/
+
+#gender,#level,#term{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    margin-bottom: 15px;
+    box-sizing:border-box;
+   
+}
+/*Styling for submit Buttons*/
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: forestgreen;
+    border: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    align-content: center;
+}
+
+
+.olai {
+  background-image: url('/img/olai_logo.png');
+  min-height: 100%;
+  background-repeat: no-repeat;
+  align-content: center;
+}
+
+.w3-card-2{
+	border-radius: 50px;
+}

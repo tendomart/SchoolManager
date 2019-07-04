@@ -1,5 +1,7 @@
 package com.school.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +12,12 @@ import javax.persistence.Table;
 import org.hibernate.annotations.ColumnDefault;
 @Entity
 @Table(name = "accounts")
-public class Accounts {
+public class Accounts implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6179811725846089159L;
+
 	public Accounts(int id, double totalStudentPayments, String totalStudentDebts, String contact) {
 		super();
 		this.id = id;

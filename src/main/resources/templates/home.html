@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org" >
+  
+ <head>
+                <meta charset="utf-8">
+                <!--Form title-->
+                <title>Olam School - Home</title>
+                <link type="text/css" th:href="@{/css/index.css}" rel="stylesheet"/>
+<link type="text/css" th:href="@{/css/login.css}" rel="stylesheet"/>
+<link type="text/css" th:href="@{/css/w3css.css}" rel="stylesheet"/>
+  <!--Use External Javascript files-->  
+    <script th:src="@{/js/index.js}"></script>
+          
+            </head>
+           
+            <!-- Body -->
+            <body>
+                    <div class="logo">
+                    </div>
+                <!--Create  a Form -->
+                <div class="w3-container w3-teal" >
+                       <center><h2>Welcome To OLAI School of Languages and Adult Education</h2></center> 
+                        <a style="text-decoration:none" th:href="@{/student}" th:align="left"><p>Register Here</p></a>
+            
+                        </div>
+                        
+                            <div class="w3-container w3-white" >
+       
+
+        <div class="w3-row-padding w3-margin-top">
+           
+            <div class="w3-quarter">
+             <a th:href="@{/student/}">
+            
+                <div  class="w3-card-2 w3-btn w3-ripple w3-teal" style="width: 300px;height: 250px;">
+               <!--  <img src="/img/gall/karl.jpg" style="width:100%"> -->
+                <div class="w3-container">
+                    <p><h2>Register New<br>Student</h2></h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+
+               <div class="w3-quarter">
+               <a th:href="@{/pay/}">
+                <div  class="w3-card-2 w3-btn w3-ripple w3-teal" style="width: 300px;height: 250px;">
+                <div class="w3-container">
+                    <p><h2>Register Student <br>Payments</h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+
+                <div class="w3-quarter">
+                <a th:href="@{/student/students}">
+                <div  class="w3-card-2 w3-btn w3-ripple w3-teal" style="width: 300px;height: 250px;">
+               <!--  <img src="/img/gall/karl.jpg" style="width:100%"> -->
+                <div class="w3-container">
+                    <p><h2>See Student<br>List</h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+                
+              
+                <div class="w3-quarter">
+                  <a th:href="@{#}">
+                <div  class="w3-card-2 w3-btn w3-ripple w3-grey" style="width: 300px;height: 250px;">
+               <!--  <img src="/img/gall/karl.jpg" style="width:100%"> -->
+                <div class="w3-container">
+                    <p><h2>See Single<br>Student Payments</h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+        </div>
+
+        <div class="w3-row-padding w3-margin-top">
+            
+            <div class="w3-quarter">
+             <a th:href="@{/main/accounts}">
+           
+                <div  class="w3-card-2 w3-btn w3-ripple" style="width: 300px;height: 250px;">
+                <img th:src="@{/img/olai_logo.png}" style="width:100%">
+                <div class="w3-container">
+                    <p><h2>Calculate School <br>Transactions</h2></p>
+                
+                </div>
+                </div></a>
+                </div>
+
+ <a th:href="@{#}">
+                <div class="w3-quarter">
+                <div  class="w3-card-2 w3-btn w3-ripple" style="width: 300px;height: 250px;">
+                <i class="fa fa-search s3"></i>
+                <div class="w3-container">
+                    <p><h2>Calculate Student<br> Transactions</h2></p>
+                
+                </div>
+                </div>
+                </div></a>
+        </div>
+         
+    </div>
+<i class="fa fa-search"></i>
+</body>
+
+</html>
